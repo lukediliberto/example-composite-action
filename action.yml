@@ -25,7 +25,7 @@ runs:
       run: |
         import os
         print(os.environ['PATH'])
-    - run: npm install --save @balena/dockerignore
+    - run: npm install --prefix ${{ github.action_path }} --save @balena/dockerignore
       shell: bash
     - run: node ${{ github.action_path }}/app.js
       shell: bash
