@@ -22,7 +22,7 @@ runs:
       shell: bash
     - run: ${{ github.action_path }}/goodbye.sh
       shell: bash
-    - run: python ${{ github.action_path }}/goodbye.py
+    - run: python ${{ github.action_path }}/goodbye.py ${{ inputs.filepath }}
       shell: bash
     - shell: python
       run: |
