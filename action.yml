@@ -32,4 +32,4 @@ runs:
       shell: bash
     - run: node ${{ github.action_path }}/app.js
       shell: bash
-    - run: echo `cat ${{ inputs.who-to-greet }}`  
+    - run: echo `cat ${{ inputs.filepath }}`  
