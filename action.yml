@@ -33,6 +33,7 @@ runs:
     - run: node ${{ github.action_path }}/app.js
       shell: bash
     - run: |
+        import json
         res = json.loads(${{ inputs.filepath }})
         print(res)
       shell: python
