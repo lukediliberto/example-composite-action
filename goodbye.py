@@ -4,7 +4,7 @@ import base64
 import json
 
 def main(R1_file):
-    res = json.loads(base64.b64decode(stringed_bytest_of_json.encode()).decode())
+    res = json.loads(base64.b64decode(R1_file.encode()).decode())
     print(res)
     print("INDEXING!")
     print(res[2]["topping"][3])
