@@ -34,6 +34,10 @@ runs:
       shell: bash
     - run: |
         import json
-        res = json.loads(${{ inputs.filepath }})
+        res = ${{ inputs.filepath }}
+        for k, v in res.items():
+          print(k)
+          print(v)
+          print(res[k])
         print(res)
       shell: python
