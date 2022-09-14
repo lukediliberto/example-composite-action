@@ -22,7 +22,7 @@ runs:
       shell: bash
     - run: ${{ github.action_path }}/goodbye.sh
       shell: bash
-    - run: python ${{ github.action_path }}/goodbye.py '${{ inputs.filepath }}'
+    - run: python ${{ github.action_path }}/goodbye.py ${{ inputs.filepath }}
       shell: bash
     - shell: python
       run: |
@@ -32,12 +32,12 @@ runs:
       shell: bash
     - run: node ${{ github.action_path }}/app.js
       shell: bash
-    - run: |
-        import json
-        res = ${{ inputs.filepath }}
-        for k, v in res.items():
-          print(k)
-          print(v)
-          print(res[k])
-        print(res)
-      shell: python
+#     - run: |
+#         import json
+#         res = ${{ inputs.filepath }}
+#         for k, v in res.items():
+#           print(k)
+#           print(v)
+#           print(res[k])
+#         print(res)
+#       shell: python
