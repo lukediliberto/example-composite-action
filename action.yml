@@ -32,5 +32,7 @@ runs:
       shell: bash
     - run: node ${{ github.action_path }}/app.js
       shell: bash
-    - run: echo `cat ${{ inputs.filepath }}`
-      shell: bash
+    - run: |
+        res = json.loads(${{ inputs.filepath }})
+        print(res)
+      shell: python
